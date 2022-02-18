@@ -1,0 +1,27 @@
+.bg-gray {
+  background-color: #f0f2f5;
+}
+.nav__btn:hover {
+  background-color: #f0f2f5 !important;
+}
+
+.nav__btn button:hover i {
+  color: blue !important;
+}
+
+.nav__btn-active i {
+  color: blue !important;
+}
+.nav__btn-active {
+  position: relative;
+}
+
+.nav__btn-active::before {
+  content: "";
+  position: absolute;
+  bottom: -4.5px;
+  left: 0;
+  width: 100%;
+  transform: translate(4.5px);
+  border-bottom: 3px solid blue;
+}

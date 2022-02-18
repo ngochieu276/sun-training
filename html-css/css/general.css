@@ -56,6 +56,17 @@ Medium: 11px
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-grey-light: #cdcdcd;
+  --color-grey-dark: #555;
+
+  --layout-column-gap: 6.4rem;
+  --layout-row-gap: 9.6rem;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -63,9 +74,6 @@ Medium: 11px
 }
 
 html {
-  /* font-size: 10px; */
-  /* 10px / 16px = 0.625 = 62.5% */
-  /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
 }
 
@@ -73,7 +81,7 @@ body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
+  color: var(--color-grey-dark);
 }
 
 /**************************/
@@ -89,8 +97,8 @@ body {
 
 .grid {
   display: grid;
-  column-gap: 6.4rem;
-  row-gap: 9.6rem;
+  column-gap: var(--layout-column-gap);
+  row-gap: var(--layout-row-gap);
 
   /* margin-bottom: 9.6rem; */
 }
@@ -127,7 +135,7 @@ body {
 .heading-secondary,
 .heading-tertiary {
   font-weight: 300;
-  color: #fff;
+  color: var(--color-white);
   /* color: #45260a; */
   /* color: #343a40; */
   letter-spacing: -0.5px;
@@ -142,7 +150,7 @@ body {
 .heading-secondary {
   font-size: 4.4rem;
   line-height: 1.2;
-  color: #000;
+  color: var(--color-black);
   margin-bottom: 6.4rem;
 }
 
@@ -156,7 +164,7 @@ body {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #000;
+  color: var(--color-black);
   align-content: center;
   text-transform: uppercase;
   margin-bottom: 1.6rem;
@@ -185,9 +193,9 @@ body {
 
 .btn--circle:link,
 .btn--circle:visited {
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 3rem;
-  color: #000;
+  color: var(--color-black);
 }
 
 .btn--circle:hover,
@@ -199,7 +207,7 @@ body {
 .btn--square:visited {
   background-color: #fff;
   border-radius: 1rem;
-  color: #555;
+  color: var(--color-grey-dark);
 }
 
 .btn--square:hover,
@@ -209,7 +217,7 @@ body {
   /* border: 3px solid #fff; */
 
   /* Trick to add border inside */
-  box-shadow: inset 0 0 0 3px #fff;
+  box-shadow: inset 0 0 0 3px var(--color-white);
 }
 
 .btn--form {
@@ -220,7 +228,7 @@ body {
 }
 
 .btn--form:hover {
-  background-color: #fff;
+  background-color: var(--color-white);
   color: #555;
 }
 

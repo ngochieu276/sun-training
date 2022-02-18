@@ -5,107 +5,103 @@
 .header {
   font-size: 1.5rem;
   padding: 3rem 8rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
 
-  background-color: #000;
-  color: #fff;
-}
-header svg {
-}
 .logo {
   height: 3rem;
   margin-right: auto;
 }
 
-.header-navigation {
+.header__navigation {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-bottom: 3rem;
-  gap: 1.8rem;
+  gap: 1.4rem;
 }
 
-.header-user {
+.header__user {
   display: flex;
   border-radius: 3rem;
   padding: 0.75rem 1.5rem;
-  background-color: #fff;
+  background-color: var(--color-white);
   justify-content: space-between;
   align-items: center;
 }
 
-.header-user img {
+.header__user img {
   height: 3rem;
 }
 
-.header-icon {
+.header__icon {
   height: 3rem;
 }
 
-.header-tool {
-  max-width: 75rem;
+.header__tool {
+  max-width: 100rem;
   margin: 0 auto;
 
   position: relative;
 }
 
-.header-searchbar {
+.searchbar {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-
-  color: #000;
+  color: var(--color-black);
   border-radius: 4rem;
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
-.header-searchbar--mobile {
+.searchbar--mobile {
   display: none;
 }
 
-.header-search-item {
+.searchbar__item {
   border-radius: 4rem;
   padding: 2rem 5rem;
   transition: all 1s;
   cursor: pointer;
 }
-.header-search-item:hover {
+.searchbar__item:hover {
   border-radius: 4rem;
   background-color: rgb(202, 202, 202);
 }
 
-.header-menu {
+.header__menu {
   position: absolute;
   left: 50%;
-  top: -75%;
+  top: -65%;
   transform: translate(-50%, -50%);
 }
 
-.header-menu ul {
+.header__menu ul {
   display: flex;
   list-style: none;
   gap: 3rem;
 }
 
-.header-menu--item:link,
-.header-menu--item:visited {
+.header__menu-item:link,
+.header__menu-item:visited {
   display: inline-block;
   padding-bottom: 1rem;
   font-size: 1.4rem;
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
   transition: all 1s;
 }
 
-.header-menu--item:hover,
-.header-menu--item:active {
-  border-bottom: 1px solid #fff;
+.header__menu-item:hover,
+.header__menu-item:active {
+  border-bottom: 1px solid var(--color-white);
 }
 
-.act {
-  border-bottom: 1px solid #fff;
+.active {
+  border-bottom: 1px solid var(--color-white);
 }
 
-.header-icon--search {
+.header__search-icon {
   height: 3rem;
   position: absolute;
   background-color: pink;
@@ -118,7 +114,7 @@ header svg {
 /* HERO */
 /**************************/
 .hero {
-  background-color: black;
+  background-color: var(--color-black);
   padding: 0 5% 5% 5%;
 }
 
@@ -126,7 +122,7 @@ header svg {
   position: relative;
 }
 
-.hero-textbox {
+.hero__textbox {
   position: absolute;
   left: 50%;
   bottom: 0%;
@@ -135,7 +131,7 @@ header svg {
   transform: translate(-50%, -50%);
 }
 
-.hero-image {
+.hero__image {
   width: 100%;
   border-radius: 0.5rem;
 }
@@ -148,26 +144,26 @@ header svg {
   padding: 2% 5%;
 }
 
-.feature-box--image {
+.feature__box-image {
   width: 100%;
   height: 80vh;
   border-radius: 1rem;
 }
-.feature-box {
+.feature__box {
   position: relative;
 }
 
-.feature-box--full {
+.feature__box--full {
   grid-column: 1/-1;
 }
 
-.feature-box--full .btn {
+.feature__box--full .btn {
   position: absolute;
   left: 0;
   bottom: -250%;
 }
 
-.feature-textbox {
+.feature__textbox {
   position: absolute;
   left: 40%;
   top: 25%;
@@ -175,7 +171,7 @@ header svg {
   transform: translate(-50%, -50%);
 }
 
-.feature-textbox .btn {
+.feature__textbox .btn {
   text-align: center;
 }
 
@@ -183,7 +179,7 @@ header svg {
 /* FOOTER */
 /**************************/
 .footer {
-  background-color: #ebebeb;
+  background-color: var(--color-grey-light);
   padding: 4rem 5%;
 }
 
@@ -202,23 +198,23 @@ header svg {
   align-items: center;
 }
 
-.footer-list {
+.footer-column__list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.footer-title {
+.footer-column__title {
   margin-bottom: 1.5rem;
 }
 
-.footer-list-item {
+.footer-column__list-item {
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-.footer-list-item:hover {
+.footer-column__list-item:hover {
   text-decoration: underline;
 }
 
@@ -234,12 +230,10 @@ header svg {
   align-items: center;
 }
 
-.footer-icon {
+.footer-others__icon {
   height: 2.5rem;
 }
-
-.footer-others--icon {
-  font-size: 1.5rem;
+.footer-others__setting {
   display: flex;
   align-items: center;
   gap: 1rem;
