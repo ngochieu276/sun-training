@@ -16,6 +16,29 @@
   position: relative;
 }
 
+.edit-button {
+  opacity: 0;
+}
+
+.edit-button:hover {
+  opacity: 1;
+}
+
+.edit-heading:hover .edit-button {
+  opacity: 1;
+}
+
+.scrollbar:hover {
+  overflow: auto !important;
+}
+
+.dropdown-item:active {
+  background-color: #d5d5d5 !important;
+}
+
+.story:hover {
+}
+
 .nav__btn-active::before {
   content: "";
   position: absolute;
