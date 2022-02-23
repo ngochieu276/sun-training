@@ -1,0 +1,33 @@
+@media (max-width: 1200px) {
+ :root {
+  --fs-3: 3rem
+ }
+
+ html {
+  font-size: 87.5%;
+ }
+
+
+}
+
+@media (max-width: 990px) {
+ :root {
+  --fs-3: 2.8rem
+ }
+
+ html {
+  font-size: 75%;
+ }
+}
+
+@media (max-width: 768px) {
+ :root {
+  --fs-3: 2.6rem
+ }
+
+ html {
+  font-size: 62.5%;
+ }
+
+
+}

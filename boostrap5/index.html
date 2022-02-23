@@ -22,20 +22,19 @@
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <title>Facebook</title>
   </head>
-  <body class="bg-gray">
+  <body>
     <!-- ============ Appbar ============= -->
-    <div
-      class="bg-white d-flex align-items-center fixed-top shadow"
-      style="min-height: 56px; z-index: 5"
-    >
-      <div class="container-fluid">
+    <header class="header --z-5 d-flex align-items-center fixed-top shadow">
+      <container class="container-fluid">
         <div class="row">
           <!-- Search -->
-          <div class="col d-flex align-items-center">
-            <i class="fab fa-facebook text-primary" style="font-size: 3rem"></i>
+          <div class="search col d-flex align-items-center">
+            <i class="search__icon fab fa-facebook text-primary"></i>
             <!-- mobile -->
             <span
               class="input-group-prepend d-lg-none"
@@ -44,10 +43,7 @@
               aria-expanded="false"
               data-bs-auto-close="outside"
             >
-              <div
-                class="input-group-text bg-gray border-0 rounded-circle"
-                style="min-height: 40px"
-              >
+              <div class="search__input search__input--mobile input-group-text">
                 <i class="fas fa-search me-2"></i>
               </div>
             </span>
@@ -60,8 +56,7 @@
               data-bs-auto-close="outside"
             >
               <div
-                class="input-group-text bg-gray border-0 rounded-pill"
-                style="min-height: 40px; min-width: 230px"
+                class="search__input search__input--desktop input-group-text"
               >
                 <i class="fas fa-search me-2"></i>
                 <p class="m-0 fs-7 text-muted">Search FaceBook</p>
@@ -69,14 +64,13 @@
             </span>
             <!-- search/dropdown -->
             <ul
-              class="dropdown-menu overflow-auto border-0 shadow p-3"
+              class="search__dropdown dropdown-menu shadow"
               aria-labelledby="searchMenu"
-              style="width: 20em; max-height: 600px"
             >
               <li>
                 <input
                   type="text"
-                  class="rounded-pill border-0 bg-gray dropdown-item"
+                  class="search__dropdown-input border-0 dropdown-item"
                   placeholder="Search Facebook..."
                   autofocus
                 />
@@ -84,15 +78,14 @@
               <!-- search 1 -->
               <li class="my-4">
                 <div
-                  class="alert fade show dropdown-item p-1 m-0 d-flex align-items-center justify-content-between"
+                  class="search__dropdown-result alert fade show dropdown-item"
                   role="alert"
                 >
                   <div class="d-flex align-items-center">
                     <img
                       src="img/avt.jpg"
                       alt="avatar"
-                      class="rounded-circle me-2"
-                      style="width: 35px; height: 35px; object-fit: cover"
+                      class="rounded-circle me-2 --circle-image"
                     />
                     <p class="m-0">Lorem ipsum</p>
                   </div>
@@ -107,15 +100,14 @@
               <!-- search 2 -->
               <li class="my-4">
                 <div
-                  class="alert fade show dropdown-item p-1 m-0 d-flex align-items-center justify-content-between"
+                  class="search__dropdown-result alert fade show dropdown-item"
                   role="alert"
                 >
                   <div class="d-flex align-items-center">
                     <img
                       src="https://source.unsplash.com/random/1"
                       alt="avatar"
-                      class="rounded-circle me-2"
-                      style="width: 35px; height: 35px; object-fit: cover"
+                      class="rounded-circle me-2 --circle-image"
                     />
                     <p class="m-0">Lorem ipsum</p>
                   </div>
@@ -130,59 +122,52 @@
             </ul>
           </div>
           <!-- Nav -->
-          <div class="col d-none d-lg-flex justify-content-between">
+          <nav class="nav col d-none d-lg-flex justify-content-between">
             <div class="nav__btn nav__btn-active">
               <button class="btn px-4">
-                <i class="fa-solid fa-house fs-4"></i>
+                <i class="fa-solid fa-house"></i>
               </button>
             </div>
             <div class="nav__btn">
               <button class="btn px-4">
-                <i class="fa-solid fa-circle-play fs-4"></i>
+                <i class="fa-solid fa-circle-play"></i>
               </button>
             </div>
             <div class="nav__btn">
               <button class="btn px-4">
-                <i class="fa fa-store fs-4"></i>
+                <i class="fa fa-store"></i>
               </button>
             </div>
             <div class="nav__btn">
               <button class="btn px-4">
-                <i class="fa fa-users position-relative fs-4">
-                  <span
-                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                  >
-                    1
-                  </span>
+                <i class="fa fa-users position-relative">
+                  <div class="noti--red">
+                    <p>1</p>
+                  </div>
                 </i>
               </button>
             </div>
-          </div>
+          </nav>
           <!-- Menu -->
-          <div class="col d-flex justify-content-end align-items-center">
+          <div class="menu col">
             <!-- avatar -->
             <div
-              class="d-none d-xl-flex align-items-center justify-content-center btn"
+              class="menu-avatar d-none d-xl-flex align-items-center justify-content-center btn"
             >
               <img
                 src="img/avt.jpg"
                 alt="avatar"
-                class="rounded-circle me-2"
-                style="width: 38px; height: 38px"
+                class="rounded-circle me-2 --circle-image"
               />
               <p class="m-0">Hieu</p>
             </div>
             <!-- mainmenu -->
-            <div
-              class="d-flex align-items-center justify-content-center p-1 mx-2 bg-gray rounded-circle btn"
-              style="height: 38px; width: 38px; object-fit: cover"
-            >
+            <div class="menu-main rounded-circle btn --circle-image">
               <i class="fa-solid fa-ellipsis"></i>
             </div>
             <!-- chat -->
             <div
-              class="d-flex align-items-center justify-content-center p-1 mx-2 bg-gray rounded-circle btn"
-              style="height: 38px; width: 38px; object-fit: cover"
+              class="menu-chat rounded-circle btn --circle-image"
               type="button"
               id="chatMenu"
               data-bs-toggle="dropdown"
@@ -190,40 +175,37 @@
               data-bs-auto-close="outside"
             >
               <i class="fa-solid fa-comment position-relative">
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger position-absolute"
-                >
-                  1
+                <span class="noti--red">
+                  <p>1</p>
                 </span>
               </i>
             </div>
             <ul
-              class="dropdown-menu border-0 shadow p-3 overflow-auto"
+              class="menu-chat__dropdown dropdown-menu border-0 shadow p-3"
               aria-labelledby="chatMenu"
-              style="width: 23em; max-height: 600px"
             >
-              <li class="p-1">
-                <div class="d-flex justify-content-between">
+              <li>
+                <div class="menu-chat__control">
                   <h2>Messenger</h2>
-                  <div class="d-flex align-items-center justify-content-evenly">
+                  <div class="menu-chat__control-list">
                     <!-- setting + settingdd -->
                     <i
-                      class="fas fa-ellipsis-h text-muted mx-2"
+                      class="fas fa-ellipsis-h"
                       type="button"
                       data-bs-toggle="dropdown"
                     ></i>
                     <i
-                      class="fa fa-maximize text-muted mx-2"
+                      class="fa fa-maximize"
                       type="button"
                       data-bs-toggle="dropdown"
                     ></i>
                     <i
-                      class="fa-solid fa-video mx-2"
+                      class="fa-solid fa-video"
                       type="button"
                       data-bs-toggle="dropdown"
                     ></i>
                     <i
-                      class="fa-solid fa-pen-to-square mx-2"
+                      class="fa-solid fa-pen-to-square"
                       type="button"
                       data-bs-toggle="dropdown"
                     ></i>
@@ -238,20 +220,19 @@
                 />
               </li>
               <li
-                class="my-2 p-1"
+                class="my-2"
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#singleChat1"
               >
-                <div class="d-flex align-items-center justify-content-between">
+                <div class="menu-chat__conversation">
                   <!-- big avatar -->
                   <div class="d-flex align-items-center justify-content-evenly">
                     <div class="p-2">
                       <img
                         src="https://source.unsplash.com/random/1"
                         alt="avatar"
-                        class="rounded-circle"
-                        style="width: 58px; height: 58px; object-fit: cover"
+                        class="rounded-circle --circle-image-lg"
                       />
                     </div>
                     <div>
@@ -266,27 +247,25 @@
                     <img
                       src="https://source.unsplash.com/random/1"
                       alt="avatar"
-                      class="rounded-circle"
-                      style="width: 15px; height: 15px; object-fit: cover"
+                      class="rounded-circle --circle-image-sm"
                     />
                   </div>
                 </div>
               </li>
               <li
-                class="my-2 p-1"
+                class="my-2"
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#singleChat1"
               >
-                <div class="d-flex align-items-center justify-content-between">
+                <div class="menu-chat__conversation">
                   <!-- big avatar -->
                   <div class="d-flex align-items-center justify-content-evenly">
                     <div class="p-2">
                       <img
                         src="https://source.unsplash.com/random/2"
                         alt="avatar"
-                        class="rounded-circle"
-                        style="width: 58px; height: 58px; object-fit: cover"
+                        class="rounded-circle --circle-image-lg"
                       />
                     </div>
                     <div>
@@ -301,8 +280,7 @@
                     <img
                       src="https://source.unsplash.com/random/1"
                       alt="avatar"
-                      class="rounded-circle"
-                      style="width: 15px; height: 15px; object-fit: cover"
+                      class="rounded-circle --circle-image-sm"
                     />
                   </div>
                 </div>
@@ -313,71 +291,70 @@
               </a>
             </ul>
             <!-- notification -->
-            <div
-              class="d-flex align-items-center justify-content-center p-1 mx-2 bg-gray rounded-circle btn"
-              style="height: 38px; width: 38px; object-fit: cover"
-            >
+            <div class="menu-notification rounded-circle btn --circle-image">
               <i class="fa-solid fa-bell position-relative">
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger position-absolute translate-middle"
-                >
-                  1
+                <span class="noti--red">
+                  <p>1</p>
                 </span>
               </i>
             </div>
             <!-- secondary menu -->
             <div
-              class="d-flex align-items-center justify-content-center p-1 mx-2 bg-gray rounded-circle btn"
-              style="height: 38px; width: 38px; object-fit: cover"
+              class="menu-secondary p-1 mx-2 rounded-circle btn --circle-image"
             >
               <i class="fa-solid fa-sort-down"></i>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </container>
+    </header>
     <!-- ============ Main ============= -->
-    <div class="container-fluid">
+    <main class="container-fluid">
       <div class="row justify-content-evenly">
         <!-- sidebar -->
-        <div class="col col-12 col-xl-3">
-          <div
-            class="d-none d-xl-block h-100 fixed-top overflow-hidden scrollbar"
-            style="max-width: 360px; width: 100%; z-index: 4"
-          >
-            <ul
-              class="navbar-nav mt ms-3 d-flex flex-column pb-5 mb-5"
-              style="padding-top: 56px"
-            >
+        <sidebar class="sidebar col col-12 col-xl-3">
+          <container class="d-none d-xl-block h-100 fixed-top scrollbar --z-4">
+            <ul class="sidebar__list navbar-nav mt ms-3">
               <!-- top -->
               <!-- avatar -->
-              <li class="dropdown-item p-1 rouded">
-                <a
-                  href="#"
-                  class="text-decoration-none text-dark d-flex align-items-center"
-                >
+              <li class="dropdown-item">
+                <a href="#">
                   <div class="p-2">
                     <img
-                      class="rounded-circle me-2"
+                      class="rounded-circle me-2 --circle-image"
                       src="img/avt.jpg"
                       alt="avatar"
-                      style="height: 38px; width: 38px; object-fit: cover"
                     />
                   </div>
                   <p class="m-2">Hieu</p>
                 </a>
               </li>
-              <li class="dropdown-item p-1 rouded">
-                <a
-                  href="#"
-                  class="text-decoration-none text-dark d-flex align-items-center"
-                >
+              <li class="dropdown-item">
+                <a href="#">
                   <div class="p-2">
                     <img
-                      class="rounded-circle me-2"
+                      class="rounded-circle me-2 --circle-image"
                       src="img/group.png"
                       alt="avatar"
-                      style="height: 38px; width: 38px; object-fit: cover"
+                    />
+                  </div>
+                  <div>
+                    <p class="m-0">Friends</p>
+                    <i
+                      class="fas fa-circle text-primary"
+                      style="font-size: 0.5rem"
+                    ></i>
+                    <span class="fs-7 text-primary">1 new</span>
+                  </div>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">
+                  <div class="p-2">
+                    <img
+                      class="rounded-circle me-2 --circle-image"
+                      src="img/group.png"
+                      alt="avatar"
                     />
                   </div>
                   <div>
@@ -390,34 +367,8 @@
                   </div>
                 </a>
               </li>
-              <li class="dropdown-item p-1 rouded">
-                <a
-                  href="#"
-                  class="text-decoration-none text-dark d-flex align-items-center"
-                >
-                  <div class="p-2">
-                    <img
-                      class="rounded-circle me-2"
-                      src="img/group.png"
-                      alt="avatar"
-                      style="height: 38px; width: 38px; object-fit: cover"
-                    />
-                  </div>
-                  <div>
-                    <p class="m-2">Friends</p>
-                    <i
-                      class="fas fa-circle text-primary"
-                      style="font-size: 0.5rem"
-                    ></i>
-                    <span class="fs-7 text-primary">1 new</span>
-                  </div>
-                </a>
-              </li>
-              <li class="dropdown-item p-1 rouded">
-                <a
-                  href="#"
-                  class="text-decoration-none text-dark d-flex align-items-center"
-                >
+              <li class="dropdown-item">
+                <a href="#">
                   <div class="p-2">
                     <img
                       class="rounded-circle me-2"
@@ -429,17 +380,13 @@
                   <p class="m-2">Memories</p>
                 </a>
               </li>
-              <li class="dropdown-item p-1 rouded">
-                <a
-                  href="#"
-                  class="text-decoration-none text-dark d-flex align-items-center"
-                >
+              <li class="dropdown-item">
+                <a href="#">
                   <div class="p-2">
                     <img
-                      class="rounded-circle me-2"
+                      class="rounded-circle me-2 --circle-image"
                       src="img/group.png"
                       alt="avatar"
-                      style="height: 38px; width: 38px; object-fit: cover"
                     />
                   </div>
                   <div>
@@ -452,33 +399,25 @@
                   </div>
                 </a>
               </li>
-              <li class="dropdown-item p-1 rouded">
-                <a
-                  href="#"
-                  class="text-decoration-none text-dark d-flex align-items-center"
-                >
+              <li class="dropdown-item">
+                <a href="#">
                   <div class="p-2">
                     <img
-                      class="rounded-circle me-2"
+                      class="rounded-circle me-2 --circle-image"
                       src="img/clock.png"
                       alt="avatar"
-                      style="height: 38px; width: 38px; object-fit: cover"
                     />
                   </div>
                   <p class="m-2">Memories</p>
                 </a>
               </li>
-              <li class="dropdown-item p-1 rouded">
-                <a
-                  href="#"
-                  class="text-decoration-none text-dark d-flex align-items-center"
-                >
+              <li class="dropdown-item">
+                <a href="#">
                   <div class="p-2">
                     <img
-                      class="rounded-circle me-2"
+                      class="rounded-circle me-2 --circle-image"
                       src="img/group.png"
                       alt="avatar"
-                      style="height: 38px; width: 38px; object-fit: cover"
                     />
                   </div>
                   <div>
@@ -494,7 +433,7 @@
               <li class="p-1" type="button">
                 <div>
                   <div>
-                    <div class="accordion-header" id="headingOne">
+                    <div class="sidebar__accordion" id="headingOne">
                       <div
                         class="d-flex align-items-center"
                         type="button"
@@ -505,8 +444,7 @@
                       >
                         <div class="p-2">
                           <i
-                            class="fas fa-chevron-down rounded-circle p-2"
-                            style="background-color: #d5d5d5 !important"
+                            class="sidebar__accordian-icon fas fa-chevron-down rounded-circle"
                           ></i>
                         </div>
                         <div class="m-0">See More</div>
@@ -520,35 +458,23 @@
                     >
                       <div>
                         <!-- item 1 -->
-                        <div
-                          class="d-flex align-items-center dropdown-item p-0 m-0"
-                        >
+                        <div class="sidebar__accordion-item dropdown-item">
                           <div class="p-2">
                             <img
                               src="img/campus.png"
                               alt="from fb"
-                              style="
-                                height: 32px;
-                                width: 32px;
-                                object-fit: cover;
-                              "
+                              class="--circle-image"
                             />
                           </div>
                           <div class="m-0">Campus</div>
                         </div>
                         <!-- item 2 -->
-                        <div
-                          class="d-flex align-items-center dropdown-item p-0 m-0"
-                        >
+                        <div class="sidebar__accordion-item dropdown-item">
                           <div class="p-2">
                             <img
                               src="img/campus.png"
                               alt="from fb"
-                              style="
-                                height: 32px;
-                                width: 32px;
-                                object-fit: cover;
-                              "
+                              class="--circle-image"
                             />
                           </div>
                           <div class="m-0">Campus</div>
@@ -562,13 +488,11 @@
               <!-- shortcut -->
               <hr class="m-0" />
               <!-- heading -->
-              <div
-                class="d-flex align-items-center justify-content-between mt-2 text-muted edit-heading"
-              >
+              <div class="sidebar-shortcut mt-2 text-muted">
                 <h4 class="m-0 text-muted">Your shortcut</h4>
                 <p
                   type="button"
-                  class="m-0 text-primary me-3 edit-button"
+                  class="edit-button m-0 text-primary me-3"
                   data-bs-toggle="modal"
                   data-bs-target="#shortcutModal"
                 >
@@ -577,7 +501,7 @@
               </div>
               <!-- button trigger modal -->
               <div
-                class="modal fade"
+                class="shortcut-modal modal fade"
                 id="shortcutModal"
                 tabindex="-1"
                 aria-labelledby="shortcutModalLabel"
@@ -607,8 +531,7 @@
                       </p>
                       <span class="input-group-prepend d-none d-lg-block">
                         <div
-                          class="input-group-text bg-gray border-0 rounded-pill"
-                          style="min-height: 40px; min-width: 230px"
+                          class="shortcut-modal__input input-group-text rounded-pill"
                         >
                           <i class="fas fa-search me-2"></i>
                           <p class="m-0 fs-7 text-muted">Search FaceBook</p>
@@ -623,14 +546,9 @@
                           <div class="d-flex align-items-center">
                             <div class="p-2">
                               <img
-                                src="img/campus.png"
+                                src="img/campus.png "
                                 alt="shortcut image"
-                                class="rounded border border-1 border-secondary"
-                                style="
-                                  height: 32px;
-                                  width: 32px;
-                                  object-fit: cover;
-                                "
+                                class="rounded border-0 border-secondary --circle-image"
                               />
                             </div>
                             <div>
@@ -660,12 +578,7 @@
                               <img
                                 src="img/campus.png"
                                 alt="shortcut image"
-                                class="rounded border border-1 border-secondary"
-                                style="
-                                  height: 32px;
-                                  width: 32px;
-                                  object-fit: cover;
-                                "
+                                class="rounded border-0 border-secondary --circle-image"
                               />
                             </div>
                             <div>
@@ -700,33 +613,25 @@
                   </div>
                 </div>
               </div>
-              <li class="dropdown-item p-1 rouded">
-                <a
-                  href="#"
-                  class="text-decoration-none text-dark d-flex align-items-center"
-                >
+              <li class="sidebar-shortcut__item dropdown-item p-1 rouded">
+                <a href="#">
                   <div class="p-2">
                     <img
-                      class="rounded-circle me-2"
+                      class="rounded-circle me-2 --circle-image"
                       src="img/campus.png"
                       alt="avatar"
-                      style="height: 38px; width: 38px; object-fit: cover"
                     />
                   </div>
                   <p class="m-2">Campus</p>
                 </a>
               </li>
-              <li class="dropdown-item p-1 rouded">
-                <a
-                  href="#"
-                  class="text-decoration-none text-dark d-flex align-items-center"
-                >
+              <li class="sidebar-shortcut__item dropdown-item p-1 rouded">
+                <a href="#">
                   <div class="p-2">
                     <img
-                      class="rounded-circle me-2"
+                      class="rounded-circle me-2 --circle-image"
                       src="img/group.png"
                       alt="avatar"
-                      style="height: 38px; width: 38px; object-fit: cover"
                     />
                   </div>
                   <p class="m-2">Friends</p>
@@ -735,7 +640,7 @@
               <li class="p-1" type="button">
                 <div>
                   <div>
-                    <div class="accordion-header" id="headingOne">
+                    <div class="sidebar__accordion" id="headingOne">
                       <div
                         class="d-flex align-items-center"
                         type="button"
@@ -746,8 +651,7 @@
                       >
                         <div class="p-2">
                           <i
-                            class="fas fa-chevron-down rounded-circle p-2"
-                            style="background-color: #d5d5d5 !important"
+                            class="fas fa-chevron-down sidebar__accordion-icon rounded-circle p-2"
                           ></i>
                         </div>
                         <div class="m-0">See More</div>
@@ -766,13 +670,9 @@
                         >
                           <div class="p-2">
                             <img
-                              src="img/group.png"
+                              src="img/group.png "
                               alt="from fb"
-                              style="
-                                height: 32px;
-                                width: 32px;
-                                object-fit: cover;
-                              "
+                              class="--circle-image"
                             />
                           </div>
                           <div class="m-0">Group</div>
@@ -785,11 +685,7 @@
                             <img
                               src="img/campus.png"
                               alt="from fb"
-                              style="
-                                height: 32px;
-                                width: 32px;
-                                object-fit: cover;
-                              "
+                              class="--circle-image"
                             />
                           </div>
                           <div class="m-0">Campus</div>
@@ -803,11 +699,11 @@
             <div class="p-2 mt-2">
               <p class="text-muted fs-7">Privacy term Ad choice cookies</p>
             </div>
-          </div>
-        </div>
+          </container>
+        </sidebar>
         <!-- timeline -->
-        <div class="col col-12 col-xl-6 col-lg-8">
-          <div
+        <section class="col col-12 col-xl-6 col-lg-8">
+          <container
             class="d-flex flex-column justify-content-center w-100 mx-auto position-relative"
             style="padding-top: 56px; max-width: 680px"
           >
@@ -1529,11 +1425,11 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </container>
+        </section>
         <!-- chatbar -->
-        <div class="col col-12 col-xl-3 col-lg-4">
-          <div
+        <section class="col col-12 col-xl-3 col-lg-4">
+          <container
             class="d-none d-lg-block h-100 overflow-hidden scrollbar"
             style="
               padding-top: 56px;
@@ -1900,10 +1796,10 @@
                 </div>
               </li>
             </div>
-          </div>
-        </div>
+          </container>
+        </section>
       </div>
-    </div>
+    </main>
     <div
       class="fixed-bottom right-100 p-3"
       style="z-index: 6; left: initial"
