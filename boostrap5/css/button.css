@@ -1,0 +1,9 @@
+.button {
+ background-color: inherit;
+ border: none;
+ box-shadow: var(--shadow);
+}
+
+.button--primary {
+ background-color: var(--primary);
+}

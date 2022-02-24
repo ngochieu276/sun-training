@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
     <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/button.css">
     <title>Facebook</title>
   </head>
   <body>
@@ -610,7 +611,8 @@
                       <div>
                         <!-- item 1 -->
                         <div>
-                          <div class="p-2">
+                          <a href="">
+                             <div class="p-2">
                             <img
                               src="img/group.png "
                               alt="from fb"
@@ -618,17 +620,20 @@
                             />
                           </div>
                           <div class="m-0">Group</div>
+                          </a>
                         </div>
                         <!-- item 2 -->
                         <div>
-                          <div class="p-2">
+                          <a href="">
+                            <div class="p-2">
                             <img
                               src="img/campus.png"
                               alt="from fb"
-                              class="--circle-image"
+                              class="--circle-image image--md"
                             />
                           </div>
                           <div class="m-0">Campus</div>
+                          </a>                        
                         </div>
                       </div>
                     </div>
@@ -1045,33 +1050,33 @@
                       <hr />
                       <!-- comment & like bar -->
                       <div class="comment-bar">
-                        <div class="comment-bar__item">
+                        <button class="button comment-bar__item">
                           <i class="fas fa-thumbs-up"></i>
                           <p>Like</p>
-                        </div>
-                        <div
-                          class="comment-bar__item"
+                        </button>
+                        <button
+                          class="button comment-bar__item"
                           data-bs-toggle="collapse"
                           data-bs-target="#collapsePost1"
                           aria-expanded="false"
                           aria-controls="collapsePost1"
-                          type="button"
+                          
                         >
                           <i class="fas fa-comment-alt"></i>
                           <p>Comment</p>
-                        </div>
-                        <div class="comment-bar__item" type="button">
+                        </button>
+                        <button class="button comment-bar__item" >
                           <i class="fas fa-share-alt"></i>
                           <p>Share</p>
-                        </div>
-                        <div class="comment-bar__item" type="button">
+                        </button>
+                        <button class="button comment-bar__item" >
                           <img
                             src="img/avt.jpg"
                             alt="avatar"
                             class="image--circle image--m"
                           />
                           <i class="fa-solid fa-caret-down"></i>
-                        </div>
+                        </button>
                       </div>
                       <!-- comment expand -->
                       <div
