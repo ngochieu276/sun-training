@@ -1,0 +1,37 @@
+.image--sm {
+ height: .5rem;
+ width: .5rem;
+ object-fit: cover;
+}
+
+.image--md {
+ height: 1.2rem;
+ width: 1.2rem;
+ object-fit: cover;
+}
+
+.image--lg {
+ height: 2rem;
+ width: 2rem;
+ object-fit: cover;
+}
+
+.image--xxl {
+ height: 3rem;
+ width: 3rem;
+ object-fit: cover;
+}
+
+.image--4xl {
+ height: 120px;
+ width: 120px;
+ object-fit: cover;
+}
+
+.image--circle {
+ border-radius: $border-circle;
+}
+
+.image--rounded {
+ border-radius: $border-rounded;
+}

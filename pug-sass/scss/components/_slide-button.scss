@@ -1,0 +1,28 @@
+.slide-button {
+ position: absolute;
+ transform: translate(-50%, -50%);
+ opacity: 0;
+ transition: all .4s;
+ border-radius: $border-circle;
+
+ &:hover {
+  opacity: 1;
+ }
+}
+
+.slide-button i {
+ padding: $s-3;
+ color: $color-grey-dark;
+ background-color: $color-grey-light-1
+}
+
+
+.slide-button--right {
+ top: 50%;
+ left: 100%
+}
+
+.slide-button--left {
+ top: 50%;
+ left: 0
+}

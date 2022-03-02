@@ -1,0 +1,8 @@
+- let search = 'search'           
+            i(class="search__logo fab fa-facebook icon--lg")
+            span(class="search__input d-none d-lg-block" id="searchMenu" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside")
+               +input("lg","Search facebook")
+               i(class="icon--start fas fa-search")
+            span(class="search__input d-lg-none" id="searchMenu" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside")
+               +input('sm')
+               i(class="icon--center fas fa-search")

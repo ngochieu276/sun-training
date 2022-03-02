@@ -1,0 +1,92 @@
+.sidebar {
+  padding-right: 5rem;
+
+  container {
+    overflow: hidden;
+    height: 100vh;
+    z-index: 4;
+    position: fixed;
+    left: 0;
+    min-width: 20rem;
+
+  }
+
+  .sidebar-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .sidebar-item {
+    &:hover {
+      background-color: $color-grey-dark-2;
+    }
+
+    list-style: none;
+    padding: $s-2 $s-2;
+    border-radius: $border-rounded;
+
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $color-grey-light-1;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: $s-2;
+
+        i {
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .shortcut {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: $s-1;
+    color: $color-grey-dark-2;
+
+    h4 {
+      margin: 0;
+      color: $color-grey-dark-2
+    }
+
+    p {
+      margin: 0;
+      margin-right: $s-2;
+      color: $color-grey-dark-2;
+    }
+
+    &__edit-button {
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &:hover .shortcut__edit-button {
+      opacity: 1;
+    }
+  }
+
+  .sidebar-footer {
+    padding: $s-2;
+    margin-top: $s-2;
+    color: $color-grey-dark-2;
+
+    p {
+      font-size: .7rem;
+    }
+  }
+}

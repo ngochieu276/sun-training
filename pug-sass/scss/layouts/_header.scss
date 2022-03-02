@@ -1,0 +1,125 @@
+.header {
+ background-color: $color-grey-dark-3;
+ min-height: 56px;
+ z-index: 5;
+ position: fixed;
+ width: 100%;
+ top: 0;
+ box-shadow: $shadow;
+ display: flex;
+ align-items: center;
+
+ // SEARCH
+ .search {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+   color: $color-tertiary-light;
+   font-size: 3rem;
+   margin: 0 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+  }
+
+  &__input {
+   position: relative;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   input {
+    text-align: center;
+   }
+
+   .icon--start {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: $transform-middle;
+    color: $color-grey-light-1;
+   }
+
+   .icon--center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: $transform-middle;
+    color: $color-grey-light-1;
+   }
+
+
+  }
+
+
+ }
+
+ // NAV 
+ .nav {
+  .nav__btn {
+   display: flex;
+   align-items: center;
+   position: relative;
+
+   i {
+    color: $color-grey-light-2;
+   }
+
+   button:hover {
+    background-color: $color-grey-dark;
+   }
+  }
+
+  .nav__btn--active {
+   i {
+    color: blue;
+   }
+
+   &::before {
+    content: "";
+    position: absolute;
+    bottom: -4.5px;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -50%);
+    border-bottom: 3px solid blue;
+   }
+
+  }
+ }
+
+ // MENU 
+ .menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: $s-4;
+  color: $color-grey-light-1;
+
+  div {
+   &:hover {
+    background-color: $color-grey-dark;
+   }
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .menu-avatar {
+   border-radius: $border-pill;
+
+   p {
+    margin: auto;
+    margin: $mx-2;
+    padding: $p-2;
+   }
+  }
+
+ }
+
+
+
+}

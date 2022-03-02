@@ -1,0 +1,22 @@
+mixin carouselItem(src)
+   img(src=`${src}` class="icon--circle icon--xxl")
+       
+- const carouselList = ["https://source.unsplash.com/random/1","https://source.unsplash.com/random/2","https://source.unsplash.com/random/3","https://source.unsplash.com/random/4","https://source.unsplash.com/random/5","https://source.unsplash.com/random/6","https://source.unsplash.com/random/7","https://source.unsplash.com/random/8"]
+
+
+         div(class="create-room__slide")
+            div(id="carouselExampleControls" class="carousel " data-bs-ride="carousel")
+               div(class="carousel-inner")
+                  div(class="carousel-item active")
+                     div 
+                        button(class="button")
+                           i(class="fas fa-video") Create room
+                        for item, i in carouselList
+                           +carouselItem(item)
+                  div(class="carousel-item ")
+                     div
+                        for item, i in carouselList
+                          +carouselItem(item)     
+                                                      
+            +slideButton('left','carouselExampleControls')
+            +slideButton('right','carouselExampleControls')

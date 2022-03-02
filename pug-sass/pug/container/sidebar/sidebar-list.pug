@@ -1,0 +1,11 @@
+
+
+mixin sidebarItem(data)
+   li(class="sidebar-item")
+      a(href="#" role="button")
+          div(class="image--circle image--xxl") 
+             i(class=`${data.class} `)
+          p=data.title
+
+for item, i in sidebarList
+         +sidebarItem(item)

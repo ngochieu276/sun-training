@@ -1,0 +1,19 @@
+.input {
+ background-color: $color-grey-dark-2;
+ padding: $p-2;
+ margin: $m-2;
+ border-radius: $border-pill;
+ border: 0;
+ color: $color-grey-light-1;
+
+}
+
+.input--sm {
+ width: 2.5rem;
+ display: flex;
+ align-items: center;
+}
+
+.input--lg {
+ width: 100%;
+}

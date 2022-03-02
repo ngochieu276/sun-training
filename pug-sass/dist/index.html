@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"> </script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+  </head>
+  <body> 
+    <header class="header"> 
+      <container class="container-fluid">
+        <div class="row justify-content-evenly">
+          <div class="search col"> <i class="search__logo fab fa-facebook icon--lg"></i><span class="search__input d-none d-lg-block" id="searchMenu" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                  <input class="input input--lg" type="text" placeholder="Search facebook"><i class="icon--start fas fa-search"></i></span><span class="search__input d-lg-none" id="searchMenu" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                  <input class="input input--sm" type="text"><i class="icon--center fas fa-search"></i></span>
+          </div>
+          <nav class="nav col d-none d-lg-flex justify-content-between">
+            <div class="nav__btn nav__btn--active">
+              <button class="btn"> <i class="fa-solid fa-house"></i></button>
+            </div>
+            <div class="nav__btn ">
+              <button class="btn"> <i class="fa-solid fa-circle-play"></i></button>
+            </div>
+            <div class="nav__btn ">
+              <button class="btn"> <i class="fa fa-store"></i></button>
+            </div>
+            <div class="nav__btn ">
+              <button class="btn"> <i class="fa fa-users noti">
+                  <div class="noti--red">
+                    <p>1</p>
+                  </div></i></button>
+            </div>
+          </nav>
+          <div class="menu col">
+            <div class="menu-avatar d-none d-xl-flex align-items-center justify-content-center "> <img class="image--circle image--lg" src="https://source.unsplash.com/random/1" alt="avatar">
+              <p>Hieu</p>
+            </div>
+            <div class="main-menu image--circle image--lg"><i class="fa-solid fa-ellipsis"></i></div>
+            <div class="menu-chat image--circle image--lg" type="button" id="chatMenu" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"><i class="fa-solid fa-comment noti"><span class="noti--red">
+                  <p>1  </p></span></i></div>
+            <div class="notification image--circle image--lg"><i class="fa-solid fa-bell noti"><span class="noti--red">
+                  <p>1 </p></span></i></div>
+            <div class="secondary-menu image--circle image--lg"><i class="fa-solid fa-sort-down"></i></div>
+          </div>
+        </div>
+      </container>
+    </header>
+    <main class="container-fluid">
+      <div class="row justify-content-evenly">
+        <sidebar class="sidebar col col-12 col-xl-3">  
+          <container class="d-none d-xl-block scroolbar">
+            <ul class="sidebar-list">
+                            <li class="sidebar-item"><a href="#" role="button">
+                                <div class="image--circle image--xxl"> <i class="fa-solid fa-user-group "></i></div>
+                                <p>Friends</p></a></li>
+                            <li class="sidebar-item"><a href="#" role="button">
+                                <div class="image--circle image--xxl"> <i class="fa-solid fa-bookmark "></i></div>
+                                <p>Saves</p></a></li>
+                            <li class="sidebar-item"><a href="#" role="button">
+                                <div class="image--circle image--xxl"> <i class="fa-solid fa-clock "></i></div>
+                                <p>Memories</p></a></li>
+                            <li class="sidebar-item"><a href="#" role="button">
+                                <div class="image--circle image--xxl"> <i class="fa-solid fa-users "></i></div>
+                                <p>Group</p></a></li>
+                            <li class="sidebar-item"><a href="#" role="button">
+                                <div class="image--circle image--xxl"> <i class="fa-solid fa-house "></i></div>
+                                <p>MarketPlace</p></a></li>
+            </ul>
+            <hr>
+            <div class="shortcut">
+              <h4>Your shortcut </h4>
+              <p class="shortcut__edit-button" data-bs-toggle="modal" data-bs-target="#shortcutModal">Edit          </p>
+            </div>
+            <ul class="sidebar-list">
+                            <li class="sidebar-item"><a href="#" role="button">
+                                <div class="image--circle image--xxl"> <i class="fa-solid fa-user-group "></i></div>
+                                <p>Friends</p></a></li>
+                            <li class="sidebar-item"><a href="#" role="button">
+                                <div class="image--circle image--xxl"> <i class="fa-solid fa-bookmark "></i></div>
+                                <p>Saves</p></a></li>
+                            <li class="sidebar-item"><a href="#" role="button">
+                                <div class="image--circle image--xxl"> <i class="fa-solid fa-clock "></i></div>
+                                <p>Memories</p></a></li>
+                            <li class="sidebar-item"><a href="#" role="button">
+                                <div class="image--circle image--xxl"> <i class="fa-solid fa-users "></i></div>
+                                <p>Group</p></a></li>
+                            <li class="sidebar-item"><a href="#" role="button">
+                                <div class="image--circle image--xxl"> <i class="fa-solid fa-house "></i></div>
+                                <p>MarketPlace</p></a></li>
+            </ul>
+            <div class="sidebar-footer">
+              <p>Privacy term Ad choice cookies                </p>
+            </div>
+          </container>
+        </sidebar>
+        <section class="timeline col col-12 col-xl-6 col-lg-8"> 
+          <container>
+            <div class="stories"> 
+              <div class="story story--create"><img class="image-card image-card--md" src="https://source.unsplash.com/random/1" alt="story-post">
+                <div>
+                  <p>Create story</p>
+                  <div class="story-button"><i class="fas fa-plus-circle icon--circle icon--lg"></i></div>
+                </div>
+              </div>
+                            <div class="story"><img class="image-card image-card--lg " src="https://source.unsplash.com/random/1" slt="story post"></div>
+                            <div class="story"><img class="image-card image-card--lg " src="https://source.unsplash.com/random/2" slt="story post"></div>
+                            <div class="story"><img class="image-card image-card--lg " src="https://source.unsplash.com/random/3" slt="story post"></div>
+                            <div class="story"><img class="image-card image-card--lg d-lg-block" src="https://source.unsplash.com/random/5" slt="story post"></div>
+                            <div class="story"><img class="image-card image-card--lg d-lg-block" src="https://source.unsplash.com/random/6" slt="story post"></div>
+                  <button class="slide-button slide-button--right d-none d-lg-block" data-bs-target="#" data-bs-slide="next"><i class="fas fa-arrow-right icon--circle"></i></button>
+            </div>
+            <div class="create-post">    
+              <div class="create-post__input">
+                <div> <img class="icon--circle icon--lg" src="https://source.unsplash.com/random/1" alt="avatar"></div>
+                <input class="input input--lg" type="text" placeholder="What's on your mind" data-bs-toggle="modal" data-bs-target="#createPostModal">
+              </div>
+              <hr>
+              <div class="create-post__action flex-lg-row ">
+                <div> <i class="fas fa-video text-danger"></i>
+                  <p>Live video</p>
+                </div>
+                <div> <i class="fas fa-video text-success"></i>
+                  <p>Photo/video</p>
+                </div>
+                <div> <i class="fas fa-video text-warning"></i>
+                  <p>Feeling/Activity </p>
+                </div>
+              </div>
+            </div>
+            <div class="create-room">        
+              <div class="create-room__slide">
+                <div class="carousel " id="carouselExampleControls" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div> 
+                        <button class="button"><i class="fas fa-video">Create room</i></button><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/1"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/2"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/3"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/4"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/5"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/6"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/7"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/8">
+                      </div>
+                    </div>
+                    <div class="carousel-item ">
+                      <div><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/1"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/2"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/3"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/4"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/5"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/6"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/7"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/8">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                    <button class="slide-button slide-button--left d-none d-lg-block" data-bs-target="#carouselExampleControls" data-bs-slide="prev"><i class="fas fa-arrow-left icon--circle"></i></button>
+                    <button class="slide-button slide-button--right d-none d-lg-block" data-bs-target="#carouselExampleControls" data-bs-slide="next"><i class="fas fa-arrow-right icon--circle"></i></button>
+              </div>
+            </div>
+            <div class="post">                            
+              <div class="post-header">
+                <div class="post-author"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/7" alt="avatar">
+                  <div> 
+                    <p>Hieu </p><span>Th6 17 at 1:23pm</span>
+                  </div>
+                </div><i class="fas fa-ellipsis-h"></i>
+              </div>
+              <div class="post-body">
+                <div class="post-content">
+                  <p class="post-content__caption">Lorem ipsum</p><img class="img-fluid rounded" src="https://source.unsplash.com/random/12" alt="post image">
+                </div>
+                <div class="post-react">                      
+                  <div class="post-react__like">
+                    <div> <i class="text-primary fas fa-thumbs-up"></i><i class="text-danger fab fa-gratipay"></i><i class="text-warning fas fa-grin-squint"></i></div>
+                    <p>Nhung, Hieu and 3 others</p>
+                  </div>
+                  <div class="post-react__comment">
+                    <p data-bs-toggle="collapse" data-bs-target="#collapsePost1" aria-expanded="false" aria-controls="collapsePost1">2 comments</p>
+                  </div>
+                </div>
+                <hr>
+                <div class="post-comment" id="post-comment">
+                  <div class="comment-bar">
+                    <button class="button comment-bar__button"><i class="fas fa thumbs-up"></i>
+                      <p>Like</p>
+                    </button>
+                    <button class="button comment-bar__button" data-bs-toggle="collapse" data-bs-target="#collapsePost1" aria-expanded="false" aria-controls="collapsePost1">  <i class="fas fa-comment-alt"></i>
+                      <p>Comment</p>
+                    </button>
+                    <button class="button comment-bar__button">  <i class="fas fa-share-alt"></i>
+                      <p>Share</p>
+                    </button>
+                    <button class="button comment-bar__button">  <img class="icon--circle icon--md" src="https://source.unsplash.com/random/1" alt="avatar"><i class="fa-solid fa-caret-down"></i></button>
+                  </div>
+                  <div class="accordion-collapse collapse" id="collapsePost1" data-bs-parent="#post-comment" type="button">
+                    <hr>
+                    <div class="accordion-body comments"></div>
+                    <form class="create-comment">
+                      <div> <img class="image--circle image--lg" src="https://source.unsplash.com/random/1" alt="avatar"></div>
+                          <input class="input input--lg" type="text" placeholder="What do you think">
+                    </form>
+                                  <div class="comment">
+                                    <div class="comment-content"><img class="icon--xxl icon--circle" src="https://source.unsplash.com/random/2" alt="avatar">
+                                      <div> 
+                                        <p class="comment-author">hieu</p>
+                                        <p class="comment-text">loream 12345</p>
+                                      </div>
+                                    </div>
+                                    <div class="comment-react">
+                                      <p>Like</p>
+                                      <p>Reply</p>
+                                      <p>11h</p>
+                                    </div>
+                                  </div>
+                                  <div class="comment">
+                                    <div class="comment-content"><img class="icon--xxl icon--circle" src="https://source.unsplash.com/random/3" alt="avatar">
+                                      <div> 
+                                        <p class="comment-author">nhung</p>
+                                        <p class="comment-text">loream 12345</p>
+                                      </div>
+                                    </div>
+                                    <div class="comment-react">
+                                      <p>Like</p>
+                                      <p>Reply</p>
+                                      <p>11h</p>
+                                    </div>
+                                  </div>
+                                  <div class="comment">
+                                    <div class="comment-content"><img class="icon--xxl icon--circle" src="https://source.unsplash.com/random/4" alt="avatar">
+                                      <div> 
+                                        <p class="comment-author">nam</p>
+                                        <p class="comment-text">loream 12345</p>
+                                      </div>
+                                    </div>
+                                    <div class="comment-react">
+                                      <p>Like</p>
+                                      <p>Reply</p>
+                                      <p>11h</p>
+                                    </div>
+                                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </container>
+        </section>
+        <section class="chatbar col col-12 col-xl-3 col-lg-4"> 
+          <container class="d-none d-lg-block scroolbar">
+            <div class="sponsor">
+              <h5>Sponsor</h5>
+                            <li class="sponsor-item"><a href="#"><img class="image--4xl icon--rounded" src="https://source.unsplash.com/random/1" alt="lorem">
+                                <h4>lorem</h4>
+                                <p>123@vn</p></a>
+                              <div class="sponsor-settings icon--circle icon--lg"><i class="fas fa-ellipsis-h " data-bs-toggle="dropdown"></i></div>
+                            </li>
+                            <li class="sponsor-item"><a href="#"><img class="image--4xl icon--rounded" src="https://source.unsplash.com/random/2" alt="lorem">
+                                <h4>lorem</h4>
+                                <p>123@vn</p></a>
+                              <div class="sponsor-settings icon--circle icon--lg"><i class="fas fa-ellipsis-h " data-bs-toggle="dropdown"></i></div>
+                            </li>
+            </div>
+            <hr>
+            <div class="contact">
+              <h5>Contacts</h5>
+              <div class="contact-tools"><i class="fa fa-video" data-bs-toggle="modal" data-bs-target="#videoRoomD"></i><i class="fa fa-search" data-bs-toggle="modal" data-bs-target="#newChat"></i><i class="fas fa-ellipsis-h" data-bs-toggle="dropdown"></i></div>
+            </div>
+            <div class="contact-list">
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/1" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Hieu</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/2" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Trang</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/3" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Nhung</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/4" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Hiep</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/5" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Nguyen</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/1" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Hieu</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/2" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Trang</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/3" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Nhung</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/4" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Hiep</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/5" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Nguyen</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/1" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Hieu</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/2" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Trang</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/3" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Nhung</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/4" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Hiep</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/5" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Nguyen</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/1" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Hieu</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/2" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Trang</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/3" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Nhung</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/4" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Hiep</p>
+                            </li>
+                            <li class="contact-item">
+                              <div class="contact-avatar"><img class="icon--circle icon--xxl" src="https://source.unsplash.com/random/5" alt="messenger avatar"><span class="state state--active"></span></div>
+                              <p>Nguyen</p>
+                            </li>
+            </div>
+          </container>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../js/script.js"> </script>
+  </body>
+</html>

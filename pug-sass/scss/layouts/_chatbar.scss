@@ -1,0 +1,102 @@
+.chatbar {
+
+ container {
+   height: 100vh;
+   overflow: hidden;
+   padding-top: 66px;
+   max-width: 100%;
+   z-index: 4;
+   position: fixed;
+   right: 0;
+ }
+
+ .sponsor {
+  h5 {
+   color: $color-grey-dark;
+  }
+  &-item {
+   margin: $my-2;
+   display: flex;
+   justify-content: space-between;
+   padding: $s-1;
+   border-radius: $border-rounded;
+
+   img {
+    margin: $mx-2;
+   }
+   &:hover {
+    background-color: $color-grey-dark;
+   }
+
+   &:hover .sponsor-settings {
+    opacity: 1;
+    background-color: $color-grey-dark-2;
+   }
+
+
+   a {
+    text-decoration: none;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    p {
+     margin: 0
+    }
+    span {
+     color: $color-white;
+    }
+  }
+  }
+
+  &-settings {
+   background-color: $color-grey-dark-2;
+   padding: $p-1;
+   margin: $mx-3;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+   transition: all .4s;
+
+  }
+ }
+
+ .contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: $my-2;
+
+  .contact-tools {
+   margin: $mx-2;
+   cursor: pointer;
+
+   i {
+    margin: $mx-2
+   }
+  }
+ }
+
+ .contact-list {
+   .contact-item {
+     list-style: none;
+     display: flex;
+     align-items: center;
+     border-radius: $border-rounded;
+     margin: $my-3;
+     &:hover {
+       background-color: $color-grey-dark-2;
+     }
+
+     p {
+       margin: 0;
+       font-weight: bold;
+     }
+   }
+   .contact-avatar {
+     position: relative;
+     margin: $mx-2;
+     
+   }
+ }
+}

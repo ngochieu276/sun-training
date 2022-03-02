@@ -1,0 +1,13 @@
+include ../components/input
+include ../components/slide-button
+
+
+include ../layouts/header
+main(class="container-fluid")
+   div(class="row justify-content-evenly")
+     sidebar(class="sidebar col col-12 col-xl-3")   
+        include ../layouts/sidebar
+     section(class="timeline col col-12 col-xl-6 col-lg-8") 
+        include ../layouts/timeline
+     section(class="chatbar col col-12 col-xl-3 col-lg-4") 
+        include ../layouts/chatbar

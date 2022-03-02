@@ -1,0 +1,23 @@
+.noti {
+ position: relative;
+}
+
+.noti--red {
+ position: absolute;
+ top: 0;
+ left: 100%;
+ height: 1em;
+ width: 1em;
+ border-radius: 50%;
+ padding: 4px;
+ background-color: $color-red;
+ transform: translate(-50%, -50%);
+ color: #fff;
+}
+
+.noti--red p {
+ font-size: .5rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}

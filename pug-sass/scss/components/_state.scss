@@ -1,0 +1,12 @@
+.state {
+ position: absolute;
+ left: 85%;
+ bottom: 0;
+ border-radius: $border-circle;
+ padding: $s-2;
+ transform: $transform-middle;
+
+ &--active {
+  background-color: $color-primary;
+ }
+}

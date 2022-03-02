@@ -1,0 +1,13 @@
+- const sidebarList = [{"class": "fa-solid fa-user-group", "title": "Friends"},{"class": "fa-solid fa-bookmark", "title": "Saves"},{"class": "fa-solid fa-clock", "title": "Memories"},{"class": "fa-solid fa-users", "title": "Group"},{"class": "fa-solid fa-house", "title": "MarketPlace"}]
+
+
+container(class="d-none d-xl-block scroolbar")
+   ul(class="sidebar-list")
+      include ../container/sidebar/sidebar-list                            
+   hr
+   div(class="shortcut")
+      include ../container/sidebar/shortcut
+   ul(class="sidebar-list")
+      include ../container/sidebar/sidebar-list
+   div(class="sidebar-footer")
+      p Privacy term Ad choice cookies                

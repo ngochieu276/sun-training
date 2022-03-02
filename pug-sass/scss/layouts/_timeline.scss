@@ -1,0 +1,241 @@
+.timeline {
+
+ container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 66px;
+  max-width: 680px;
+ }
+
+ .stories {
+  display: flex;
+  padding-top: $s-3;
+  position: relative;
+
+  .story {
+   margin: $mx-1;
+   background-color: $color-grey-dark-3;
+   cursor: pointer;
+   width: 7rem;
+   height: 190px;
+
+   &--create {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+   }
+
+    >div {
+    position: relative;
+    padding-bottom: $s-2;
+    border-end-end-radius: $border-rounded;
+    border-end-start-radius: $border-rounded;
+    min-height: 65px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: $color-grey-light-1;
+   }
+   p {
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: bold;
+   }
+
+   &-button {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: $transform-middle;
+    text-align: center;
+
+    i {
+     color: $color-tertiary-light;
+     background: $color-grey-light-1;
+     padding: auto;
+     font-size: 2rem;
+
+    }
+   }
+  }
+ }
+
+ .create-post {
+  background-color: $color-grey-dark;
+  padding: $s-3;
+  margin-top: $s-3;
+  border-radius: $border-rounded;
+  box-shadow: $shadow;
+
+  &__input {
+   display: flex;
+   cursor: pointer;
+   align-items: center;
+  }
+
+  &__action {
+  display: flex;
+  flex-direction: column;
+  margin-top: $s-3;
+  justify-content: space-between;
+
+   > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: $s-3;
+    border-radius: $border-rounded;
+
+    &:hover {
+     background-color: $color-grey-dark-2;
+    }
+   }
+
+   p {
+    color: $color-grey-light-1;
+    margin: 0;
+    margin-left: $s-2
+   }
+  }
+ }
+
+ .create-room {
+  background-color: $color-grey-dark;
+  padding: $s-3;
+  margin-top: $s-2;
+  border-radius: $border-rounded;
+  box-shadow: $shadow;
+  display: flex;
+  justify-content: center;
+  
+
+  &__slide {
+   width: 95%;
+   position: relative;
+  }
+
+  button {
+   border-radius: $border-pill;
+   background-color: $color-tertiary-dark;
+  }
+
+ }
+
+ .post {
+  color: $color-grey-dark;
+  padding: $py-3;
+  background-color: $color-grey-dark-3;
+  margin-top: $s-4;
+  border-radius: $border-rounded;
+
+  &-header {
+   padding: $p-3;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+    .post-author {
+       display: flex;
+       align-items: center;
+       gap: $s-3;
+
+       p {
+        margin: $s-1;
+       }
+    }
+  }
+
+  &-body {
+
+  }
+
+  &-content {
+     &__caption {
+      padding: $px-2;
+      margin-bottom: $s-3;
+     }
+     img {
+      width: 100%;
+      height: fit-content;
+     }
+    }
+
+  &-react {
+      margin-top: $s-4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__like {
+       display: flex;
+       align-items: center;
+      }
+
+      &__comment {
+       font-weight: bold;
+       display: flex;
+       align-items: center;
+      }
+    }
+
+  &-comment {
+    .comment-bar {
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+
+     &__button {
+      display: flex;
+      gap: $s-2;
+      align-items: center;
+      background-color: inherit;
+      border: none;
+      
+      i,p {
+       color: $color-grey-dark;
+      }
+     }
+    }
+  }
+  
+  .comment {
+   color: $color-grey-light-1;
+   &-content {
+    display: flex;
+    align-items: flex-start;
+
+    img {
+     margin-right: $s-3;
+    }
+
+    div {
+     padding: $s-2;
+     border-radius: 1rem;
+     background-color: $color-grey-dark-2;
+    }
+   }
+
+   &-author {
+    font-weight: bold;
+   }
+
+   &-react {
+    margin-left: 39px;
+    display: flex;
+    gap: $s-3
+   }
+  }
+
+  .create-comment {
+   display: flex;
+   align-items: center;
+  }
+
+ }
+
+
+}

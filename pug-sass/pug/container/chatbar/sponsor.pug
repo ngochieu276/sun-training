@@ -1,0 +1,14 @@
+- const sponsorList = [{"src": "https://source.unsplash.com/random/1","title": "lorem", "link": "123@vn"},{"src": "https://source.unsplash.com/random/2","title": "lorem", "link": "123@vn"}]
+
+mixin sponsorItem(item)
+   li(class="sponsor-item")
+         a(href="#")
+            img(src=`${item.src}` alt=`${item.title}` class="image--4xl icon--rounded")
+            h4=item.title
+            p=item.link
+         div(class="sponsor-settings icon--circle icon--lg")
+            i(class="fas fa-ellipsis-h " data-bs-toggle="dropdown")
+
+h5 Sponsor
+for n,i in sponsorList
+   +sponsorItem(n)

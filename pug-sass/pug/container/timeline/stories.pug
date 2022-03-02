@@ -1,0 +1,16 @@
+mixin storyItem(data)
+   div(class="story")
+      img(src=`${data.src}` class=`image-card image-card--lg ${data.res ? 'd-lg-block' : ''}` slt="story post" )
+
+- const storiesList = [{"src": "https://source.unsplash.com/random/1"},{"src": "https://source.unsplash.com/random/2"},{"src": "https://source.unsplash.com/random/3"},{"src": "https://source.unsplash.com/random/5","res": true},{"src": "https://source.unsplash.com/random/6", "res": true}]
+
+
+         div(class="story story--create")
+            img(src="https://source.unsplash.com/random/1" class="image-card image-card--md" alt="story-post")
+            div
+               p Create story
+               div(class="story-button")
+                  i(class="fas fa-plus-circle icon--circle icon--lg")
+         for item, i in storiesList
+            +storyItem(item)
+         +slideButton('right', '')   

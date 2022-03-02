@@ -1,0 +1,60 @@
+mixin commentItem(comment)
+   div(class="comment")
+      div(class="comment-content")
+         img(src=`${comment.avatar}` alt="avatar" class="icon--xxl icon--circle")
+         div 
+            p(class="comment-author")=comment.name
+            p(class="comment-text")=comment.text
+      div(class="comment-react")
+         p Like
+         p Reply
+         p 11h
+         
+- const commentList = [{"avatar": "https://source.unsplash.com/random/2","name": "hieu","text": "loream 12345"},{"avatar": "https://source.unsplash.com/random/3","name": "nhung","text": "loream 12345"},{"avatar": "https://source.unsplash.com/random/4","name": "nam","text": "loream 12345"}]  
+
+      
+         div(class="post-header")
+            div(class="post-author")
+               img(src="https://source.unsplash.com/random/7" alt="avatar" class="icon--circle icon--xxl")
+               div 
+                  p Hieu 
+                  span Th6 17 at 1:23pm
+            i(class="fas fa-ellipsis-h")
+         div(class="post-body")
+            div(class="post-content")
+               p(class="post-content__caption") Lorem ipsum
+               img(src="https://source.unsplash.com/random/12" alt="post image" class="img-fluid rounded")
+                        
+            div(class="post-react")                       
+               div(class="post-react__like")
+                  div 
+                     i(class="text-primary fas fa-thumbs-up")
+                     i(class="text-danger fab fa-gratipay")
+                     i(class="text-warning fas fa-grin-squint")
+                  p Nhung, Hieu and 3 others
+               div(class="post-react__comment")
+                  p(data-bs-toggle="collapse" data-bs-target="#collapsePost1" aria-expanded="false" aria-controls="collapsePost1") 2 comments
+            hr   
+            div(class="post-comment" id="post-comment")
+               div(class="comment-bar")
+                  button(class="button comment-bar__button")
+                     i(class="fas fa thumbs-up")
+                     p Like
+                  button(class="button comment-bar__button" data-bs-toggle="collapse" data-bs-target="#collapsePost1" aria-expanded="false" aria-controls="collapsePost1")   
+                     i(class="fas fa-comment-alt")
+                     p Comment
+                  button(class="button comment-bar__button")   
+                     i(class="fas fa-share-alt")
+                     p Share
+                  button(class="button comment-bar__button")   
+                     img(src="https://source.unsplash.com/random/1" alt="avatar" class="icon--circle icon--md")
+                     i(class="fa-solid fa-caret-down")
+               div(id="collapsePost1" class="accordion-collapse collapse" data-bs-parent="#post-comment" type="button")
+                  hr 
+                  div(class="accordion-body comments")
+                  form(class="create-comment")
+                     div 
+                        img(src="https://source.unsplash.com/random/1" alt="avatar" class="image--circle image--lg")
+                     +input('lg','What do you think')    
+                  for comment in commentList 
+                     +commentItem(comment)

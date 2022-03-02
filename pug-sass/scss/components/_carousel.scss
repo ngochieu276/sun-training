@@ -1,0 +1,19 @@
+
+
+.carousel {
+
+ &-inner {
+  width: 100%;
+}
+
+ &-item {
+  >div {
+   display: flex;
+   align-items: center;
+  }
+
+  img {
+   margin: $mx-2;
+  }
+}
+}

@@ -1,0 +1,4 @@
+mixin slideButton(direction,target)
+   button(class=`slide-button slide-button--${direction} d-none d-lg-block` data-bs-target=`#${target}` data-bs-slide=`${direction == 'left' ? 'prev' : 'next'}`)
+      i(class=`fas fa-arrow-${direction} icon--circle`)
+

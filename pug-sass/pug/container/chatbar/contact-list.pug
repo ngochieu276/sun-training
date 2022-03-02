@@ -1,0 +1,12 @@
+-const contactList = [{"src": "https://source.unsplash.com/random/1","name": "Hieu"},{"src": "https://source.unsplash.com/random/2","name": "Trang"},{"src": "https://source.unsplash.com/random/3","name": "Nhung"},{"src": "https://source.unsplash.com/random/4","name": "Hiep"},{"src": "https://source.unsplash.com/random/5","name": "Nguyen"},{"src": "https://source.unsplash.com/random/1","name": "Hieu"},{"src": "https://source.unsplash.com/random/2","name": "Trang"},{"src": "https://source.unsplash.com/random/3","name": "Nhung"},{"src": "https://source.unsplash.com/random/4","name": "Hiep"},{"src": "https://source.unsplash.com/random/5","name": "Nguyen"},{"src": "https://source.unsplash.com/random/1","name": "Hieu"},{"src": "https://source.unsplash.com/random/2","name": "Trang"},{"src": "https://source.unsplash.com/random/3","name": "Nhung"},{"src": "https://source.unsplash.com/random/4","name": "Hiep"},{"src": "https://source.unsplash.com/random/5","name": "Nguyen"},{"src": "https://source.unsplash.com/random/1","name": "Hieu"},{"src": "https://source.unsplash.com/random/2","name": "Trang"},{"src": "https://source.unsplash.com/random/3","name": "Nhung"},{"src": "https://source.unsplash.com/random/4","name": "Hiep"},{"src": "https://source.unsplash.com/random/5","name": "Nguyen"}]
+
+
+mixin contactItem(item)
+   li(class="contact-item" )
+            div(class="contact-avatar" )
+              img(src=`${item.src}` alt="messenger avatar" class="icon--circle icon--xxl")
+              span(class="state state--active")
+            p=item.name
+
+for item in contactList 
+   +contactItem(item)
